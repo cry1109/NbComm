@@ -134,10 +134,9 @@ namespace NbComm
 
             pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
 
-            richTextBoxInput.AppendText("作者小破站主页:https://space.bilibili.com/435336705?spm_id_from=333.1007.0.0\r\n" + 
-                                        "还有很多好玩又实用的技术分享\r\n");
+            richTextBoxInput.AppendText("最新版本下载:https://github.com/cry1109/NbComm_App.git\r\n");
+            richTextBoxInput.AppendText("作者小破站主页:https://space.bilibili.com/435336705?spm_id_from=333.1007.0.0\r\n");
 
-            
             /*串口初始化*/
             serialPort1.BaudRate = 115200;
             serialPort1.StopBits = System.IO.Ports.StopBits.One;
