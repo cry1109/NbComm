@@ -33,30 +33,6 @@
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btExtrude = new System.Windows.Forms.Button();
-            this.btFindLast = new System.Windows.Forms.Button();
-            this.btFindNext = new System.Windows.Forms.Button();
-            this.btRxFind = new System.Windows.Forms.Button();
-            this.textBoxFind = new System.Windows.Forms.TextBox();
-            this.richTextBoxInput = new System.Windows.Forms.RichTextBox();
-            this.textBoxSend = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
-            this.fontDialog1 = new System.Windows.Forms.FontDialog();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.ChartTimer = new System.Windows.Forms.Timer(this.components);
-            this.fileSendTimer = new System.Windows.Forms.Timer(this.components);
-            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.labelVersion = new System.Windows.Forms.Label();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btClose = new System.Windows.Forms.Button();
-            this.btMin = new System.Windows.Forms.Button();
             this.myGroupBox6 = new NbComm.MyGroupBox(this.components);
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.btFileOpen = new System.Windows.Forms.Button();
@@ -78,6 +54,7 @@
             this.btRxColor = new System.Windows.Forms.Button();
             this.btTxColor = new System.Windows.Forms.Button();
             this.btRxFont = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.myGroupBox3 = new NbComm.MyGroupBox(this.components);
             this.TxEncodingBox = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -114,16 +91,39 @@
             this.comboBoxJudge = new System.Windows.Forms.ComboBox();
             this.checkBoxRts = new System.Windows.Forms.CheckBox();
             this.comboBoxPort = new System.Windows.Forms.ComboBox();
+            this.btExtrude = new System.Windows.Forms.Button();
+            this.btFindLast = new System.Windows.Forms.Button();
+            this.btFindNext = new System.Windows.Forms.Button();
+            this.btRxFind = new System.Windows.Forms.Button();
+            this.textBoxFind = new System.Windows.Forms.TextBox();
+            this.richTextBoxInput = new System.Windows.Forms.RichTextBox();
+            this.textBoxSend = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
+            this.fontDialog1 = new System.Windows.Forms.FontDialog();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.ChartTimer = new System.Windows.Forms.Timer(this.components);
+            this.fileSendTimer = new System.Windows.Forms.Timer(this.components);
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.labelVersion = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btClose = new System.Windows.Forms.Button();
+            this.btMin = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.myGroupBox6.SuspendLayout();
             this.myGroupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.myGroupBox4.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.myGroupBox3.SuspendLayout();
             this.myGroupBox2.SuspendLayout();
             this.myGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -137,269 +137,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1550, 860);
             this.panel1.TabIndex = 3;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.myGroupBox3);
-            this.panel2.Controls.Add(this.myGroupBox2);
-            this.panel2.Controls.Add(this.myGroupBox1);
-            this.panel2.Controls.Add(this.btExtrude);
-            this.panel2.Controls.Add(this.btFindLast);
-            this.panel2.Controls.Add(this.btFindNext);
-            this.panel2.Controls.Add(this.btRxFind);
-            this.panel2.Controls.Add(this.textBoxFind);
-            this.panel2.Controls.Add(this.richTextBoxInput);
-            this.panel2.Controls.Add(this.textBoxSend);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1295, 860);
-            this.panel2.TabIndex = 3;
-            // 
-            // btExtrude
-            // 
-            this.btExtrude.BackgroundImage = global::NbComm.Properties.Resources.btFind01;
-            this.btExtrude.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btExtrude.FlatAppearance.BorderSize = 0;
-            this.btExtrude.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btExtrude.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btExtrude.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btExtrude.Font = new System.Drawing.Font("等线", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btExtrude.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btExtrude.Location = new System.Drawing.Point(960, 594);
-            this.btExtrude.Name = "btExtrude";
-            this.btExtrude.Size = new System.Drawing.Size(80, 32);
-            this.btExtrude.TabIndex = 39;
-            this.btExtrude.Text = "突 出";
-            this.btExtrude.UseVisualStyleBackColor = true;
-            this.btExtrude.Click += new System.EventHandler(this.btExtrude_Click);
-            this.btExtrude.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btExtrude_MouseDown);
-            this.btExtrude.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btExtrude_MouseUp);
-            // 
-            // btFindLast
-            // 
-            this.btFindLast.BackgroundImage = global::NbComm.Properties.Resources.btFind03;
-            this.btFindLast.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btFindLast.FlatAppearance.BorderSize = 0;
-            this.btFindLast.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btFindLast.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btFindLast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btFindLast.Font = new System.Drawing.Font("等线", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btFindLast.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btFindLast.Location = new System.Drawing.Point(1174, 593);
-            this.btFindLast.Name = "btFindLast";
-            this.btFindLast.Size = new System.Drawing.Size(115, 32);
-            this.btFindLast.TabIndex = 38;
-            this.btFindLast.Text = "上 一 条";
-            this.btFindLast.UseVisualStyleBackColor = true;
-            this.btFindLast.Click += new System.EventHandler(this.btFindLast_Click);
-            this.btFindLast.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btFindLast_MouseDown);
-            this.btFindLast.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btFindLast_MouseUp);
-            // 
-            // btFindNext
-            // 
-            this.btFindNext.BackgroundImage = global::NbComm.Properties.Resources.btFind03;
-            this.btFindNext.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btFindNext.FlatAppearance.BorderSize = 0;
-            this.btFindNext.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btFindNext.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btFindNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btFindNext.Font = new System.Drawing.Font("等线", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btFindNext.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btFindNext.Location = new System.Drawing.Point(1049, 594);
-            this.btFindNext.Name = "btFindNext";
-            this.btFindNext.Size = new System.Drawing.Size(115, 32);
-            this.btFindNext.TabIndex = 37;
-            this.btFindNext.Text = "下 一 条";
-            this.btFindNext.UseVisualStyleBackColor = true;
-            this.btFindNext.Click += new System.EventHandler(this.btFindNext_Click);
-            this.btFindNext.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btFindNext_MouseDown);
-            this.btFindNext.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btFindNext_MouseUp);
-            // 
-            // btRxFind
-            // 
-            this.btRxFind.BackgroundImage = global::NbComm.Properties.Resources.btFind01;
-            this.btRxFind.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btRxFind.FlatAppearance.BorderSize = 0;
-            this.btRxFind.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btRxFind.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btRxFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btRxFind.Font = new System.Drawing.Font("等线", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btRxFind.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btRxFind.Location = new System.Drawing.Point(870, 594);
-            this.btRxFind.Name = "btRxFind";
-            this.btRxFind.Size = new System.Drawing.Size(80, 32);
-            this.btRxFind.TabIndex = 36;
-            this.btRxFind.Text = "查 找";
-            this.btRxFind.UseVisualStyleBackColor = true;
-            this.btRxFind.Click += new System.EventHandler(this.btRxFind_Click);
-            this.btRxFind.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btRxFind_MouseDown);
-            this.btRxFind.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btRxFind_MouseUp);
-            // 
-            // textBoxFind
-            // 
-            this.textBoxFind.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.textBoxFind.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxFind.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxFind.ForeColor = System.Drawing.Color.White;
-            this.textBoxFind.Location = new System.Drawing.Point(298, 594);
-            this.textBoxFind.MaxLength = 1024;
-            this.textBoxFind.Name = "textBoxFind";
-            this.textBoxFind.Size = new System.Drawing.Size(560, 31);
-            this.textBoxFind.TabIndex = 35;
-            // 
-            // richTextBoxInput
-            // 
-            this.richTextBoxInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.richTextBoxInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBoxInput.Font = new System.Drawing.Font("等线", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.richTextBoxInput.ForeColor = System.Drawing.Color.Cyan;
-            this.richTextBoxInput.Location = new System.Drawing.Point(298, 6);
-            this.richTextBoxInput.Name = "richTextBoxInput";
-            this.richTextBoxInput.ReadOnly = true;
-            this.richTextBoxInput.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
-            this.richTextBoxInput.Size = new System.Drawing.Size(995, 580);
-            this.richTextBoxInput.TabIndex = 34;
-            this.richTextBoxInput.Text = "";
-            this.richTextBoxInput.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.richTextBoxInput_LinkClicked);
-            this.richTextBoxInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.richTextBoxInput_KeyDown);
-            this.richTextBoxInput.KeyUp += new System.Windows.Forms.KeyEventHandler(this.richTextBoxInput_KeyUp);
-            // 
-            // textBoxSend
-            // 
-            this.textBoxSend.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.textBoxSend.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxSend.Font = new System.Drawing.Font("等线", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSend.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))));
-            this.textBoxSend.Location = new System.Drawing.Point(298, 633);
-            this.textBoxSend.MaxLength = 10485760;
-            this.textBoxSend.Multiline = true;
-            this.textBoxSend.Name = "textBoxSend";
-            this.textBoxSend.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxSend.Size = new System.Drawing.Size(995, 215);
-            this.textBoxSend.TabIndex = 18;
-            this.textBoxSend.TextChanged += new System.EventHandler(this.textBoxSend_TextChanged);
-            this.textBoxSend.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSend_KeyPress);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Black;
-            this.label1.Font = new System.Drawing.Font("等线", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label1.Location = new System.Drawing.Point(67, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 26);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "NbComm";
-            // 
-            // serialPort1
-            // 
-            this.serialPort1.ReadBufferSize = 5242880;
-            this.serialPort1.WriteBufferSize = 5242880;
-            this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 200;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // timer2
-            // 
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // ChartTimer
-            // 
-            this.ChartTimer.Enabled = true;
-            this.ChartTimer.Interval = 50;
-            this.ChartTimer.Tick += new System.EventHandler(this.ChartTimer_Tick);
-            // 
-            // fileSendTimer
-            // 
-            this.fileSendTimer.Interval = 50;
-            this.fileSendTimer.Tick += new System.EventHandler(this.fileSendTimer_Tick);
-            // 
-            // folderBrowserDialog1
-            // 
-            this.folderBrowserDialog1.Description = "请选择文件保存路径";
-            // 
-            // labelVersion
-            // 
-            this.labelVersion.AutoSize = true;
-            this.labelVersion.BackColor = System.Drawing.Color.Black;
-            this.labelVersion.Font = new System.Drawing.Font("等线", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelVersion.ForeColor = System.Drawing.Color.Gainsboro;
-            this.labelVersion.Location = new System.Drawing.Point(191, 24);
-            this.labelVersion.Name = "labelVersion";
-            this.labelVersion.Size = new System.Drawing.Size(49, 19);
-            this.labelVersion.TabIndex = 6;
-            this.labelVersion.Text = "版本:";
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
-            this.pictureBox1.ErrorImage = global::NbComm.Properties.Resources.nb_logo;
-            this.pictureBox1.Image = global::NbComm.Properties.Resources.nb_logo;
-            this.pictureBox1.InitialImage = global::NbComm.Properties.Resources.nb_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 6);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(52, 36);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btClose
-            // 
-            this.btClose.BackgroundImage = global::NbComm.Properties.Resources.btClose01;
-            this.btClose.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.btClose.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btClose.FlatAppearance.BorderSize = 0;
-            this.btClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.btClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.btClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btClose.Location = new System.Drawing.Point(1502, 8);
-            this.btClose.Name = "btClose";
-            this.btClose.Size = new System.Drawing.Size(36, 36);
-            this.btClose.TabIndex = 1;
-            this.btClose.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btClose.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.btClose.UseVisualStyleBackColor = false;
-            this.btClose.Click += new System.EventHandler(this.btClose_Click);
-            this.btClose.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btClose_MouseDown);
-            this.btClose.MouseEnter += new System.EventHandler(this.btClose_MouseEnter);
-            this.btClose.MouseLeave += new System.EventHandler(this.btClose_MouseLeave);
-            this.btClose.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btClose_MouseUp);
-            // 
-            // btMin
-            // 
-            this.btMin.BackgroundImage = global::NbComm.Properties.Resources.btMin01;
-            this.btMin.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btMin.FlatAppearance.BorderSize = 0;
-            this.btMin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.btMin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
-            this.btMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btMin.Location = new System.Drawing.Point(1457, 8);
-            this.btMin.Name = "btMin";
-            this.btMin.Size = new System.Drawing.Size(36, 36);
-            this.btMin.TabIndex = 0;
-            this.btMin.UseVisualStyleBackColor = true;
-            this.btMin.Click += new System.EventHandler(this.btMin_Click);
-            this.btMin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btMin_MouseDown);
-            this.btMin.MouseEnter += new System.EventHandler(this.btMin_MouseEnter);
-            this.btMin.MouseLeave += new System.EventHandler(this.btMin_MouseLeave);
-            this.btMin.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btMin_MouseUp);
             // 
             // myGroupBox6
             // 
@@ -773,6 +510,23 @@
             this.btRxFont.MouseLeave += new System.EventHandler(this.btRxFont_MouseLeave);
             this.btRxFont.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btRxFont_MouseUp);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.myGroupBox3);
+            this.panel2.Controls.Add(this.myGroupBox2);
+            this.panel2.Controls.Add(this.myGroupBox1);
+            this.panel2.Controls.Add(this.btExtrude);
+            this.panel2.Controls.Add(this.btFindLast);
+            this.panel2.Controls.Add(this.btFindNext);
+            this.panel2.Controls.Add(this.btRxFind);
+            this.panel2.Controls.Add(this.textBoxFind);
+            this.panel2.Controls.Add(this.richTextBoxInput);
+            this.panel2.Controls.Add(this.textBoxSend);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1295, 860);
+            this.panel2.TabIndex = 3;
+            // 
             // myGroupBox3
             // 
             this.myGroupBox3.BorderColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -785,9 +539,9 @@
             this.myGroupBox3.Controls.Add(this.TimerSendcheckBox);
             this.myGroupBox3.Controls.Add(this.radioButtonTxAsc);
             this.myGroupBox3.Controls.Add(this.radioButtonTxHex);
-            this.myGroupBox3.Location = new System.Drawing.Point(8, 633);
+            this.myGroupBox3.Location = new System.Drawing.Point(7, 633);
             this.myGroupBox3.Name = "myGroupBox3";
-            this.myGroupBox3.Size = new System.Drawing.Size(282, 216);
+            this.myGroupBox3.Size = new System.Drawing.Size(285, 216);
             this.myGroupBox3.TabIndex = 42;
             this.myGroupBox3.TabStop = false;
             // 
@@ -805,7 +559,7 @@
             "Unicode",
             "UTF-8",
             "UTF-32"});
-            this.TxEncodingBox.Location = new System.Drawing.Point(129, 16);
+            this.TxEncodingBox.Location = new System.Drawing.Point(132, 16);
             this.TxEncodingBox.Name = "TxEncodingBox";
             this.TxEncodingBox.Size = new System.Drawing.Size(140, 29);
             this.TxEncodingBox.TabIndex = 38;
@@ -878,7 +632,7 @@
             this.btTxSend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btTxSend.Font = new System.Drawing.Font("微软雅黑", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btTxSend.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btTxSend.Location = new System.Drawing.Point(150, 161);
+            this.btTxSend.Location = new System.Drawing.Point(153, 161);
             this.btTxSend.Name = "btTxSend";
             this.btTxSend.Size = new System.Drawing.Size(120, 40);
             this.btTxSend.TabIndex = 38;
@@ -943,9 +697,9 @@
             this.myGroupBox2.Controls.Add(this.btRxSave);
             this.myGroupBox2.Controls.Add(this.TimestampcheckBox);
             this.myGroupBox2.Controls.Add(this.radioButtonRxHex);
-            this.myGroupBox2.Location = new System.Drawing.Point(8, 376);
+            this.myGroupBox2.Location = new System.Drawing.Point(7, 376);
             this.myGroupBox2.Name = "myGroupBox2";
-            this.myGroupBox2.Size = new System.Drawing.Size(282, 250);
+            this.myGroupBox2.Size = new System.Drawing.Size(285, 250);
             this.myGroupBox2.TabIndex = 41;
             this.myGroupBox2.TabStop = false;
             // 
@@ -986,7 +740,7 @@
             "Unicode",
             "UTF-8",
             "UTF-32"});
-            this.RxEncodingBox.Location = new System.Drawing.Point(129, 16);
+            this.RxEncodingBox.Location = new System.Drawing.Point(132, 16);
             this.RxEncodingBox.Name = "RxEncodingBox";
             this.RxEncodingBox.Size = new System.Drawing.Size(140, 29);
             this.RxEncodingBox.TabIndex = 31;
@@ -1063,7 +817,7 @@
             this.btRxSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btRxSave.Font = new System.Drawing.Font("微软雅黑", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btRxSave.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btRxSave.Location = new System.Drawing.Point(150, 190);
+            this.btRxSave.Location = new System.Drawing.Point(153, 190);
             this.btRxSave.Name = "btRxSave";
             this.btRxSave.Size = new System.Drawing.Size(120, 40);
             this.btRxSave.TabIndex = 33;
@@ -1117,9 +871,9 @@
             this.myGroupBox1.Controls.Add(this.comboBoxJudge);
             this.myGroupBox1.Controls.Add(this.checkBoxRts);
             this.myGroupBox1.Controls.Add(this.comboBoxPort);
-            this.myGroupBox1.Location = new System.Drawing.Point(8, 5);
+            this.myGroupBox1.Location = new System.Drawing.Point(7, 5);
             this.myGroupBox1.Name = "myGroupBox1";
-            this.myGroupBox1.Size = new System.Drawing.Size(282, 364);
+            this.myGroupBox1.Size = new System.Drawing.Size(285, 364);
             this.myGroupBox1.TabIndex = 40;
             this.myGroupBox1.TabStop = false;
             // 
@@ -1136,7 +890,7 @@
             "7",
             "6",
             "5"});
-            this.comboDatalength.Location = new System.Drawing.Point(129, 229);
+            this.comboDatalength.Location = new System.Drawing.Point(132, 229);
             this.comboDatalength.Name = "comboDatalength";
             this.comboDatalength.Size = new System.Drawing.Size(140, 29);
             this.comboDatalength.TabIndex = 30;
@@ -1152,7 +906,7 @@
             this.btOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btOpen.Font = new System.Drawing.Font("微软雅黑", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btOpen.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btOpen.Location = new System.Drawing.Point(150, 15);
+            this.btOpen.Location = new System.Drawing.Point(153, 15);
             this.btOpen.Name = "btOpen";
             this.btOpen.Size = new System.Drawing.Size(120, 40);
             this.btOpen.TabIndex = 18;
@@ -1191,7 +945,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("黑体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label4.Location = new System.Drawing.Point(15, 181);
+            this.label4.Location = new System.Drawing.Point(16, 181);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 23);
             this.label4.TabIndex = 23;
@@ -1202,7 +956,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("黑体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label6.Location = new System.Drawing.Point(15, 232);
+            this.label6.Location = new System.Drawing.Point(16, 232);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(82, 23);
             this.label6.TabIndex = 29;
@@ -1220,7 +974,7 @@
             "1",
             "1.5",
             "2"});
-            this.comboStopbit.Location = new System.Drawing.Point(129, 178);
+            this.comboStopbit.Location = new System.Drawing.Point(132, 178);
             this.comboStopbit.Name = "comboStopbit";
             this.comboStopbit.Size = new System.Drawing.Size(140, 29);
             this.comboStopbit.TabIndex = 24;
@@ -1231,7 +985,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("黑体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label2.Location = new System.Drawing.Point(15, 79);
+            this.label2.Location = new System.Drawing.Point(16, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 23);
             this.label2.TabIndex = 17;
@@ -1242,7 +996,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("黑体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label5.Location = new System.Drawing.Point(15, 283);
+            this.label5.Location = new System.Drawing.Point(16, 283);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(82, 23);
             this.label5.TabIndex = 25;
@@ -1287,7 +1041,7 @@
             "460800",
             "921600",
             "1382400"});
-            this.comboBoxBoud.Location = new System.Drawing.Point(129, 127);
+            this.comboBoxBoud.Location = new System.Drawing.Point(132, 127);
             this.comboBoxBoud.MaxLength = 7;
             this.comboBoxBoud.Name = "comboBoxBoud";
             this.comboBoxBoud.Size = new System.Drawing.Size(140, 29);
@@ -1301,7 +1055,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("黑体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label3.Location = new System.Drawing.Point(15, 130);
+            this.label3.Location = new System.Drawing.Point(16, 130);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 23);
             this.label3.TabIndex = 19;
@@ -1319,7 +1073,7 @@
             "无",
             "奇校验",
             "偶校验"});
-            this.comboBoxJudge.Location = new System.Drawing.Point(129, 280);
+            this.comboBoxJudge.Location = new System.Drawing.Point(132, 280);
             this.comboBoxJudge.Name = "comboBoxJudge";
             this.comboBoxJudge.Size = new System.Drawing.Size(140, 29);
             this.comboBoxJudge.TabIndex = 26;
@@ -1346,10 +1100,256 @@
             this.comboBoxPort.Font = new System.Drawing.Font("等线", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.comboBoxPort.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.comboBoxPort.FormattingEnabled = true;
-            this.comboBoxPort.Location = new System.Drawing.Point(129, 76);
+            this.comboBoxPort.Location = new System.Drawing.Point(132, 76);
             this.comboBoxPort.Name = "comboBoxPort";
             this.comboBoxPort.Size = new System.Drawing.Size(140, 29);
             this.comboBoxPort.TabIndex = 20;
+            // 
+            // btExtrude
+            // 
+            this.btExtrude.BackgroundImage = global::NbComm.Properties.Resources.btFind01;
+            this.btExtrude.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btExtrude.FlatAppearance.BorderSize = 0;
+            this.btExtrude.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btExtrude.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btExtrude.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btExtrude.Font = new System.Drawing.Font("等线", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btExtrude.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btExtrude.Location = new System.Drawing.Point(960, 594);
+            this.btExtrude.Name = "btExtrude";
+            this.btExtrude.Size = new System.Drawing.Size(80, 32);
+            this.btExtrude.TabIndex = 39;
+            this.btExtrude.Text = "突 出";
+            this.btExtrude.UseVisualStyleBackColor = true;
+            this.btExtrude.Click += new System.EventHandler(this.btExtrude_Click);
+            this.btExtrude.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btExtrude_MouseDown);
+            this.btExtrude.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btExtrude_MouseUp);
+            // 
+            // btFindLast
+            // 
+            this.btFindLast.BackgroundImage = global::NbComm.Properties.Resources.btFind03;
+            this.btFindLast.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btFindLast.FlatAppearance.BorderSize = 0;
+            this.btFindLast.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btFindLast.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btFindLast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btFindLast.Font = new System.Drawing.Font("等线", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btFindLast.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btFindLast.Location = new System.Drawing.Point(1174, 593);
+            this.btFindLast.Name = "btFindLast";
+            this.btFindLast.Size = new System.Drawing.Size(115, 32);
+            this.btFindLast.TabIndex = 38;
+            this.btFindLast.Text = "上 一 条";
+            this.btFindLast.UseVisualStyleBackColor = true;
+            this.btFindLast.Click += new System.EventHandler(this.btFindLast_Click);
+            this.btFindLast.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btFindLast_MouseDown);
+            this.btFindLast.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btFindLast_MouseUp);
+            // 
+            // btFindNext
+            // 
+            this.btFindNext.BackgroundImage = global::NbComm.Properties.Resources.btFind03;
+            this.btFindNext.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btFindNext.FlatAppearance.BorderSize = 0;
+            this.btFindNext.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btFindNext.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btFindNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btFindNext.Font = new System.Drawing.Font("等线", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btFindNext.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btFindNext.Location = new System.Drawing.Point(1049, 594);
+            this.btFindNext.Name = "btFindNext";
+            this.btFindNext.Size = new System.Drawing.Size(115, 32);
+            this.btFindNext.TabIndex = 37;
+            this.btFindNext.Text = "下 一 条";
+            this.btFindNext.UseVisualStyleBackColor = true;
+            this.btFindNext.Click += new System.EventHandler(this.btFindNext_Click);
+            this.btFindNext.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btFindNext_MouseDown);
+            this.btFindNext.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btFindNext_MouseUp);
+            // 
+            // btRxFind
+            // 
+            this.btRxFind.BackgroundImage = global::NbComm.Properties.Resources.btFind01;
+            this.btRxFind.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btRxFind.FlatAppearance.BorderSize = 0;
+            this.btRxFind.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btRxFind.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btRxFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btRxFind.Font = new System.Drawing.Font("等线", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btRxFind.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btRxFind.Location = new System.Drawing.Point(871, 594);
+            this.btRxFind.Name = "btRxFind";
+            this.btRxFind.Size = new System.Drawing.Size(80, 32);
+            this.btRxFind.TabIndex = 36;
+            this.btRxFind.Text = "查 找";
+            this.btRxFind.UseVisualStyleBackColor = true;
+            this.btRxFind.Click += new System.EventHandler(this.btRxFind_Click);
+            this.btRxFind.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btRxFind_MouseDown);
+            this.btRxFind.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btRxFind_MouseUp);
+            // 
+            // textBoxFind
+            // 
+            this.textBoxFind.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.textBoxFind.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxFind.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBoxFind.ForeColor = System.Drawing.Color.White;
+            this.textBoxFind.Location = new System.Drawing.Point(298, 594);
+            this.textBoxFind.MaxLength = 1024;
+            this.textBoxFind.Name = "textBoxFind";
+            this.textBoxFind.Size = new System.Drawing.Size(560, 31);
+            this.textBoxFind.TabIndex = 35;
+            // 
+            // richTextBoxInput
+            // 
+            this.richTextBoxInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.richTextBoxInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.richTextBoxInput.Font = new System.Drawing.Font("等线", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.richTextBoxInput.ForeColor = System.Drawing.Color.Cyan;
+            this.richTextBoxInput.Location = new System.Drawing.Point(298, 6);
+            this.richTextBoxInput.Name = "richTextBoxInput";
+            this.richTextBoxInput.ReadOnly = true;
+            this.richTextBoxInput.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
+            this.richTextBoxInput.Size = new System.Drawing.Size(995, 580);
+            this.richTextBoxInput.TabIndex = 34;
+            this.richTextBoxInput.Text = "";
+            this.richTextBoxInput.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.richTextBoxInput_LinkClicked);
+            this.richTextBoxInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.richTextBoxInput_KeyDown);
+            this.richTextBoxInput.KeyUp += new System.Windows.Forms.KeyEventHandler(this.richTextBoxInput_KeyUp);
+            // 
+            // textBoxSend
+            // 
+            this.textBoxSend.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.textBoxSend.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxSend.Font = new System.Drawing.Font("等线", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSend.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(120)))));
+            this.textBoxSend.Location = new System.Drawing.Point(298, 633);
+            this.textBoxSend.MaxLength = 10485760;
+            this.textBoxSend.Multiline = true;
+            this.textBoxSend.Name = "textBoxSend";
+            this.textBoxSend.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxSend.Size = new System.Drawing.Size(995, 215);
+            this.textBoxSend.TabIndex = 18;
+            this.textBoxSend.TextChanged += new System.EventHandler(this.textBoxSend_TextChanged);
+            this.textBoxSend.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxSend_KeyPress);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Black;
+            this.label1.Font = new System.Drawing.Font("等线", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label1.Location = new System.Drawing.Point(67, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 26);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "NbComm";
+            // 
+            // serialPort1
+            // 
+            this.serialPort1.ReadBufferSize = 5242880;
+            this.serialPort1.WriteBufferSize = 5242880;
+            this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 200;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // timer2
+            // 
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // ChartTimer
+            // 
+            this.ChartTimer.Enabled = true;
+            this.ChartTimer.Interval = 50;
+            this.ChartTimer.Tick += new System.EventHandler(this.ChartTimer_Tick);
+            // 
+            // fileSendTimer
+            // 
+            this.fileSendTimer.Interval = 50;
+            this.fileSendTimer.Tick += new System.EventHandler(this.fileSendTimer_Tick);
+            // 
+            // folderBrowserDialog1
+            // 
+            this.folderBrowserDialog1.Description = "请选择文件保存路径";
+            // 
+            // labelVersion
+            // 
+            this.labelVersion.AutoSize = true;
+            this.labelVersion.BackColor = System.Drawing.Color.Black;
+            this.labelVersion.Font = new System.Drawing.Font("等线", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labelVersion.ForeColor = System.Drawing.Color.Gainsboro;
+            this.labelVersion.Location = new System.Drawing.Point(191, 24);
+            this.labelVersion.Name = "labelVersion";
+            this.labelVersion.Size = new System.Drawing.Size(49, 19);
+            this.labelVersion.TabIndex = 6;
+            this.labelVersion.Text = "版本:";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(12)))), ((int)(((byte)(12)))));
+            this.pictureBox1.ErrorImage = global::NbComm.Properties.Resources.nb_logo;
+            this.pictureBox1.Image = global::NbComm.Properties.Resources.nb_logo;
+            this.pictureBox1.InitialImage = global::NbComm.Properties.Resources.nb_logo;
+            this.pictureBox1.Location = new System.Drawing.Point(4, 6);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(52, 36);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btClose
+            // 
+            this.btClose.BackgroundImage = global::NbComm.Properties.Resources.btClose01;
+            this.btClose.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.btClose.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btClose.FlatAppearance.BorderSize = 0;
+            this.btClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btClose.Location = new System.Drawing.Point(1502, 8);
+            this.btClose.Name = "btClose";
+            this.btClose.Size = new System.Drawing.Size(36, 36);
+            this.btClose.TabIndex = 1;
+            this.btClose.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btClose.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btClose.UseVisualStyleBackColor = false;
+            this.btClose.Click += new System.EventHandler(this.btClose_Click);
+            this.btClose.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btClose_MouseDown);
+            this.btClose.MouseEnter += new System.EventHandler(this.btClose_MouseEnter);
+            this.btClose.MouseLeave += new System.EventHandler(this.btClose_MouseLeave);
+            this.btClose.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btClose_MouseUp);
+            // 
+            // btMin
+            // 
+            this.btMin.BackgroundImage = global::NbComm.Properties.Resources.btMin01;
+            this.btMin.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btMin.FlatAppearance.BorderSize = 0;
+            this.btMin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btMin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btMin.Location = new System.Drawing.Point(1457, 8);
+            this.btMin.Name = "btMin";
+            this.btMin.Size = new System.Drawing.Size(36, 36);
+            this.btMin.TabIndex = 0;
+            this.btMin.UseVisualStyleBackColor = true;
+            this.btMin.Click += new System.EventHandler(this.btMin_Click);
+            this.btMin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btMin_MouseDown);
+            this.btMin.MouseEnter += new System.EventHandler(this.btMin_MouseEnter);
+            this.btMin.MouseLeave += new System.EventHandler(this.btMin_MouseLeave);
+            this.btMin.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btMin_MouseUp);
             // 
             // Form1
             // 
@@ -1375,21 +1375,21 @@
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseUp);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.myGroupBox6.ResumeLayout(false);
             this.myGroupBox6.PerformLayout();
             this.myGroupBox5.ResumeLayout(false);
             this.myGroupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.myGroupBox4.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.myGroupBox3.ResumeLayout(false);
             this.myGroupBox3.PerformLayout();
             this.myGroupBox2.ResumeLayout(false);
             this.myGroupBox2.PerformLayout();
             this.myGroupBox1.ResumeLayout(false);
             this.myGroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
